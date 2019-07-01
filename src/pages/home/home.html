@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>
+            Scanner
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-item>
+        <ion-label floating>Scanned Data</ion-label>
+        <ion-input type="text" (ionChange)="onSearch($event)" [(ngModel)]="txt" #input></ion-input>
+    </ion-item>
+
+    <br>
+
+    <button ion-button color="primary" (click)="view()">View</button>
+
+    <button ion-button color="primary" (click)="scan()">scan</button>
+
+
+
 </ion-content>
